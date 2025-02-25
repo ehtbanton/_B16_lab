@@ -3,9 +3,15 @@
  ** author: Andrea Vedaldi
  **/
 
+#define GLUT_DISABLE_ATEXIT_HACK
+#ifdef _WIN32
+#include <windows.h>  // Important for Windows!
+#endif
+
 #include "graphics.h"
 
 #include <cassert>
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <iostream>
 #include <algorithm>

@@ -6,23 +6,31 @@
 #ifndef __graphics__
 #define __graphics__
 
-#include "simulation.h"
+ // System headers first
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
-// STL
+// Standard C++ headers
 #include <string>
 #include <vector>
 
-// The OpenGL and GLUT libraries
-
+// OpenGL headers with platform-specific includes
 #if defined(__APPLE__)
 #include <OpenGL/OpenGL.h>
 #include <GLUT/glut.h>
 #else
-
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
 #endif
+
+// Local headers last
+#include "simulation.h"
+
+// Forward declarations
+class Drawable;
+class Figure;
 
 void run() ;
 void run(Simulation * simulation, double timeStep) ;

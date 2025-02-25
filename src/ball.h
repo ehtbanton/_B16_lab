@@ -8,6 +8,7 @@
 
 #include "simulation.h"
 
+// Class definition
 class Ball : public Simulation
 {
 public:
@@ -17,6 +18,8 @@ public:
   Ball(double r, double x, double y, double vx, double vy, double g, double m, double xmin, double xmax, double ymin, double ymax);
   void step(double dt) ;
   void display() ;
+
+  void run(Simulation& s, double dt) {}
 
   // Add getter and setter functions for the ball's position and velocity
   double getX() { return x; }

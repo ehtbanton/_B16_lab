@@ -19,7 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\opengl_functionality_test.cpp" />
+    <ClInclude Include="src\ball.h" />
+    <ClInclude Include="src\graphics.h" />
+    <ClInclude Include="src\simulation.h" />
+    <ClInclude Include="src\springmass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ball.cpp" />
+    <ClCompile Include="src\graphics.cpp" />
+    <ClCompile Include="src\springmass.cpp" />
+    <ClCompile Include="src\test-ball-graphics.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

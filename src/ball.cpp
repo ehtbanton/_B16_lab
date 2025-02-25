@@ -35,6 +35,7 @@ Ball::Ball(double r,double x,double y,double vx,double vy, double g, double m, d
 	this->ymax = ymax;
 }
 
+// Method implementation
 void Ball::step(double dt)
 {
 	double xp = x + vx * dt; // x position increases by velocity*time

@@ -7,16 +7,15 @@
 
 int main(int argc, char** argv)
 {
-  SpringMass springmass ;
-
   const double mass = 0.05 ;
   const double radius = 0.02 ;
   const double naturalLength = 0.95 ;
 
-  Mass m1(Vector2(-.5,0), Vector2(), mass, radius) ;
-  Mass m2(Vector2(+.5,0), Vector2(), mass, radius) ;
+  Mass m1(Vector2(-.8,0), Vector2(), mass, radius) ;
+  Mass m2(Vector2(+.8,0), Vector2(), mass, radius) ;
 
-/* INCOMPLETE: TYPE YOUR CODE HERE */
+  Spring spring(&m1, &m2, naturalLength, 5.0, 0.01);
+  SpringMass springmass(spring);
 
   const double dt = 1.0/30 ;
   for (int i = 0 ; i < 100 ; ++i) {
